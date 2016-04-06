@@ -1,4 +1,5 @@
 # akka-http-rest
+[Build Status](https://travis-ci.org/JauFeng/akka-http-rest.svg)
 A RESTful backend for my [App](https://github.com/JauFeng/MyApplication). Thus, you can use it as a microservice architecture.
 ## Prerequirement
 I assume that you have installed Mongodb(3.2) already. And create a database named `dev`, a collection named `patient`.Of course, you can use [Flyway](https://flywaydb.org) to evolve your Database Schema easily.
