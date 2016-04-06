@@ -1,8 +1,7 @@
-# akka-http-rest
-[Build Status](https://travis-ci.org/JauFeng/akka-http-rest.svg)
-A RESTful backend for my [App](https://github.com/JauFeng/MyApplication). Thus, you can use it as a microservice architecture.
+# akka-http-rest [![Build Status](https://travis-ci.org/JauFeng/akka-http-rest.svg?branch=master)]((https://travis-ci.org/JauFeng/akka-http-rest.svg))
+A RESTful API for my **[App](https://github.com/JauFeng/MyApplication)**. In addition to this, you can use it as a microservice architecture.
 ## Prerequirement
-I assume that you have installed Mongodb(3.2) already. And create a database named `dev`, a collection named `patient`.Of course, you can use [Flyway](https://flywaydb.org) to evolve your Database Schema easily.
+I assume that you have installed Mongodb(3.2) already. And created a database named `dev`, a collection named `patient`. Of course, you can use ***[Flyway](https://flywaydb.org)*** to evolve your Database Schema easily.
 ## Running
 Start the services with sbt:
 ```
@@ -27,4 +26,4 @@ Start a container by the `api:1.0-SNAPSHOT` image use command:
 $ docker run --name api-8080 -p 8080:9000 api:1.0-SNAPSHOT
 ```
 
-See more: [Docker](https://www.docker.com/)
+See more: *[Docker](https://www.docker.com/)*
