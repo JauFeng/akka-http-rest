@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="WARN">
+    <Properties>
+        <Property name="logDir">logs/mongodb</Property>
+    </Properties>
+
+    <Appenders>
+        <RollingFile name="file"
+                     fileName="${logDir}/app.log"
+                     filePattern="${logDir}/app.%d{dd-MM-yyyy}.log.gz">
+            <PatternLayout>
+                <Pattern>%d %p %c{1.} [%t] %m %ex%n</Pattern>
+            </PatternLayout>
+
+            <Policies>
+                <TimeBasedTriggeringPolicy/>
+                <SizeBasedTriggeringPolicy size="20M"/>
+            </Policies>
+            <DefaultRolloverStrategy max="60"/>
+        </RollingFile>
+
+        <Console name="STDOUT" target="SYSTEM_OUT">
+            <PatternLayout pattern="%m%n"/>
+        </Console>
+    </Appenders>
+    <Loggers>
+        <Root level="trace">
+            <AppenderRef ref="file" level="DEBUG"/>
+            <AppenderRef ref="STDOUT" level="INFO"/>
+        </Root>
+    </Loggers>
+</Configuration>
